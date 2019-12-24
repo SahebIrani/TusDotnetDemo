@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>TusDotnetDemo</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <form>
+        <div class="uploadControl">
+            <input type="file" name="droppedFile" id="droppedFile" />
+            <input type="button" id="uploadButton" value="Upload" onclick="uploadFile()" />
+            <input type="button" id="cancelUploadButton" value="Cancel" onclick="cancelUpload()" disabled />
+            <progress value="0" max="100" id="uploadProgress" style="display:none"></progress>
+        </div>
+        <span id="downloadLink"></span>
+    </form>
+
+    <script src="tus.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

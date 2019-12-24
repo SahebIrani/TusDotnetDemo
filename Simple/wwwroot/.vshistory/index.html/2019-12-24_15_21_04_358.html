@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+    <title>TusDotnetDemo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css"
+          integrity="sha256-A47OwxL/nAN0ydiDFTSGX7ftbfTJTKgiJ0zqCuTPDh4=" crossorigin="anonymous" />
+
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-dark">
+
+    <article class="mt-2 border rounded p-4 col-10 my-4 mx-auto">
+        <h1 class="display-4 text-info pb-4">TusDotnetDemo .. !!!!</h1>
+        <input class="form-control bg-dark text-light" type="file" name="droppedFile" id="droppedFile" />
+        <section class="my-4">
+            <input class="btn btn-success" type="button" id="uploadButton" value="Upload" onclick="uploadFile()" />
+            <input class="btn btn-danger" type="button" id="cancelUploadButton" value="Cancel" onclick="cancelUpload()" disabled />
+        </section>
+
+        <section class="progress mb-3" style="height: 31px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info mb-3" id="uploadProgress" role="progressbar"
+                      value="0" max="100" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                      style="display:none;width: 0%">
+            </div>
+        </section>
+
+        <span class="mt-4" id="downloadLink"></span>
+    </article>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"
+            integrity="sha256-66f6uQTQkvHF8jpniLWJjnteEfmQaC/tATFew/nTBA8=" crossorigin="anonymous">
+    </script>
+
+    <script src="tus.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

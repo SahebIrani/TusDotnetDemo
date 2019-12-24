@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+    <title>TusDotnetDemo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css"
+          integrity="sha256-A47OwxL/nAN0ydiDFTSGX7ftbfTJTKgiJ0zqCuTPDh4=" crossorigin="anonymous" />
+
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <article class="col-12">
+        <form >
+            <div class="uploadControl">
+                <input class="form-control" type="file" name="droppedFile" id="droppedFile" />
+                <section>
+                    <input class="btn btn-success" type="button" id="uploadButton" value="Upload" onclick="uploadFile()" />
+                    <input class="btn btn-info mt-2" type="button" id="cancelUploadButton" value="Cancel" onclick="cancelUpload()" disabled />
+                </section>
+                <div class="progress mt-2">
+                    <progress value="0" max="100" id="uploadProgress" style="display:none"></progress>
+                </div>
+            </div>
+            <span class="mt-2" id="downloadLink"></span>
+        </form>
+    </article>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"
+            integrity="sha256-66f6uQTQkvHF8jpniLWJjnteEfmQaC/tATFew/nTBA8=" crossorigin="anonymous">
+    </script>
+
+    <script src="tus.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
